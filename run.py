@@ -1,6 +1,12 @@
 import json
+import xlsxwriter
+
 with open('options.json') as f:
     data = json.load(f)
+
+print(data['name'] +"  "+ data['languages'][0])
+
+
 # Output: {'name': 'Bob', 'languages': ['English', 'Fench']}
 #{
 #    "name": "Bob",
@@ -9,6 +15,3 @@ with open('options.json') as f:
 #        "Fench"
 #    ]
 #}
-print(data['name'] + data['languages'])
-
-
