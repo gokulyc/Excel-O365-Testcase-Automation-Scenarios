@@ -9,22 +9,27 @@ with open('options.json') as f:
     data = json.load(f)
 
 print(data['name'] + "  " + data['languages'][0])
-wb = load_workbook(filename = Path('in\\a.xlsx'))
+wb = load_workbook(filename=Path(data['path1']))
 #wb = Workbook('in\a.xlsx')
 sheet_ranges = wb['Sheet1']
 print(sheet_ranges['D18'].value)
 ws = wb.active
 
-highlight1 = NamedStyle(name="highlight")
-highlight1.font = Font(bold=True, size=20)
+
+#highlight1 = NamedStyle(name="highlight")
+    #highlight1.font = Font(bold=True, size=12)
 bd = Side(style='thick', color="000000")
-highlight1.border = Border(left=bd, top=bd, right=bd, bottom=bd)
-wb.add_named_style(highlight1)
+    #highlight1.border = Border(left=bd, top=bd, right=bd, bottom=bd)
+    # wb.add
+    # wb.add_named_style(highlight1)
+ws['E9'].border = Border(left=bd, top=bd, right=bd, bottom=bd)
+#ws['E9'].Side(style='thick', color="000000")
+ws['E9'].font = Font(bold=True, size=12)
 
-ws['E9'].style = highlight1
 
+wb.save(filename=Path(data['path1']))
 wb.close()
-print("done")
+print("done and closing")
 
 # Output: {'name': 'Bob', 'languages': ['English', 'Fench']}
 # {
