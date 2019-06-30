@@ -15,8 +15,6 @@ sheet_ranges = wb['Sheet1']
 print(sheet_ranges['D18'].value)
 ws = wb.active
 
-
-
 bd = Side(style='thick', color="000000")
 
 #ws['C28'].border = Border(left=bd, top=bd, right=bd, bottom=bd)
