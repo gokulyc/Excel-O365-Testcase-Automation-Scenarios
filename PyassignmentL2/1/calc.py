@@ -14,6 +14,17 @@ from math import radians,degrees
 def toRadians(num):
     return radians(num)
 
+from math import sin,cos,tan,pi
+
+def getsin(v_radian):
+    return sin(v_radian)
+
+def getcos(v_radian):
+    return cos(v_radian)
+
+def gettan(v_radian):
+    return tan(v_radian)
+
 
 if __name__ == "__main__":
     n=input('Enter interger to find factorial : ')
@@ -24,3 +35,7 @@ if __name__ == "__main__":
 
     n2=input('Enter number to convert to radians :')
     print('{} coverted into Radians is {}'.format(n2,toRadians(float(n2))))
+
+    
+
+    
