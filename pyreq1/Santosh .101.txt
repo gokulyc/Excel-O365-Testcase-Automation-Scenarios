@@ -1,0 +1,3 @@
+{Id:101, Name:Santosh ,subject: maths,marks:35}
+{Id:101, Name:Santosh ,subject: Hindi,marks:30}
+		Total : 65

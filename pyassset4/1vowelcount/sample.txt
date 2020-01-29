@@ -1,0 +1,4 @@
+Python uses dynamic typing, and a combination of reference counting
+and a cycle-detecting garbage collector for memory management.
+It also features dynamic name resolution (late binding),
+which binds method and variable names during program execution.

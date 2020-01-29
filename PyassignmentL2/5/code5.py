@@ -1,7 +1,7 @@
 import os,re
 os.getcwd()
 patterns=['\w*[aeiou][aeiou]\w*']
-with open('5/info.txt',mode='r') as myfile:
+with open('info.txt',mode='r') as myfile:
     contents=myfile.read()
     print(contents)
 
