@@ -1,2 +1,3 @@
 {Id:102, Name: Hina,subject: English,marks:41}
-		Total : 41
+{Id:102, Name: Hina,subject: maths,marks:40}
+		Total : 81

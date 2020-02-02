@@ -5,22 +5,17 @@ import numpy as np
 
 # print(os.getcwd())
 # print(pd,dir(pd))
-
+data_path='student.txt'
+df = pd.read_csv(data_path)
 
 def GetStudentUniqueIDs():
-    li=getfiletolist()
-    idset=set()
-    llen=li.__len__()
-    i=4
-    while(i!=llen):
-        idset.add(li[i])
-        i=i+4
-    return idset
+    a=df['Rollno'].unique()
+    return a
 
 def printstudentdetails(id):
-    df = pd.read_csv('student.txt')
-    df.columns=[column.replace("<", "") for column in df.columns] 
-    df.columns=[column.replace(">", "") for column in df.columns] 
+    # df = pd.read_csv('student.txt')
+    # df.columns=[column.replace("<", "") for column in df.columns] 
+    # df.columns=[column.replace(">", "") for column in df.columns] 
     # print(df)
     str1=f'Rollno=={id}'
     student1=df.query(str1,inplace=False)
@@ -40,18 +35,6 @@ def printstudentdetails(id):
     # print(out)
     return out,student1.iloc[[i],[1]].values[0][0],student1.iloc[[i],[0]].values[0][0]
 
-
-# Read Student Data
-def getfiletolist():
-    patterns=[r'\w+']
-    with open('student.txt',mode='r') as myfile1:
-        contents=myfile1.read()
-        # print(contents)
-    for pattern in patterns:
-        # print(f'Searching for the phrase using the re check :{pattern}')
-        extractlist=re.findall(pattern,contents)
-        # print(extractlist,'\n')
-        return extractlist
 
 def getstr_template(a,b,c,d):
     '''
