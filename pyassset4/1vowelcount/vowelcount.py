@@ -14,7 +14,7 @@ def countvowel(word):
 if __name__ == __name__:
     # print(os.getcwd())
     patterns = ['\w+']
-    with open(r'1\sample.txt', mode='r') as myfile:  # modes r w a r+ w+
+    with open(r'1vowelcount\sample.txt', mode='r') as myfile:  # modes r w a r+ w+
         contents = myfile.read()
         for pattern in patterns:
             words = re.findall(pattern, contents)
