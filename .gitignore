@@ -4,3 +4,5 @@ pyreq1/test/
 .vscode/
 PyassignmentL2/debug.log
 PyL1Assignment.zip
+*.pyc
+PyL2assignment.zip
